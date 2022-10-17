@@ -1,0 +1,148 @@
+body {
+    margin: 0
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+:root {
+    --ff-primary: 'Oswald', sans-serif;
+    --clr-primary: #d90429;
+    --clr-secondary: #edf2f4;
+    --clr-favorite: red;
+    --clr-cart: rgb(34, 231, 34);
+
+    --space-sides: 3.5em;
+}
+
+/* Typography */
+
+body {
+    font-family: var(--ff-primary)
+}
+
+header {
+    color: var(--clr-secondary);
+}
+
+.cart-btn {
+    font-family: inherit;
+    font-size: 1.2rem;
+    color: var(--clr-secondary);
+}
+
+.cart-price {
+    font-size: 1.2rem;
+}
+
+.cart-total {
+    font-size: 1.5rem;
+}
+
+/* General Layout Main*/
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 var(--space-sides);
+
+    background-color: var(--clr-primary);
+}
+
+.header-cart {
+    font-size: 2em;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.img-container {
+    padding: 2em var(--space-sides);
+
+    display: grid;
+    grid-gap: 5px;
+    grid-auto-rows: 100px;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    grid-auto-flow: dense;
+}
+
+.img-item {
+    position: relative;
+}
+
+.img-cart {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    color: var(--clr-cart);
+    cursor: pointer;
+}
+
+.img-favorite {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    color: var(--clr-favorite);
+    cursor: pointer;
+}
+
+.img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.big {
+    grid-column: span 2;
+    grid-row: span 2;
+}
+
+.wide {
+    grid-column: span 2;
+}
+
+/* General Layout Cart */
+
+.cart-container {
+    margin-inline: var(--space-sides);
+}
+
+.cart-title {
+    text-align: center;
+}
+
+.cart-total {
+    text-align: right;
+}
+
+.cart-btn {
+    display: block;
+    margin-inline: auto;
+    padding: 0.8em 1em;
+
+    border: 2px solid var(--clr-secondary);
+    background-color: var(--clr-primary);
+
+    cursor: pointer;
+}
+
+.cart-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.5em;
+}
+
+.cart-delete {
+    cursor: pointer;
+}
+
+.cart-img {
+    width: 30%;
+    margin-right: auto;
+    margin-left: 0.2em;
+}
